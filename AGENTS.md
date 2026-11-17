@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Free Fire lookups run only in `createServerFn` handlers in `src/lib/ff.functions.ts`; the Games Kinbo / Volsever keys come from server env and never reach the browser. Why: keys are paid/limited and must stay secret.
+- The Free Fire item picture list (`src/server/ff-items.json`) is imported lazily inside the server handler only. Why: it is ~1.3 MB and must not ship to the browser; `src/server/` cannot be imported by route files.
+- Store packages, prices and contact number live in `src/lib/site.ts`. Why: one place to edit shop data.
