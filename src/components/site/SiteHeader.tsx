@@ -2,12 +2,20 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
 
-import logoUrl from "@/assets/naviya-logo-transparent.png";
+import emblemUrl from "@/assets/naviya-emblem.png";
 
-export function Logo() {
+export function Logo({ tone = "light", size = "md" }: { tone?: "light" | "dark"; size?: "md" | "lg" }) {
   return (
-    <Link to="/" className="flex items-center" aria-label="NAVIYA TOPUP home">
-      <img src={logoUrl} alt="NAVIYA TOPUP STORE" className="logo-img" />
+    <Link
+      to="/"
+      className={`wordmark wordmark-${tone} wordmark-${size}`}
+      aria-label="NAVIYA TOPUP home"
+    >
+      <img src={emblemUrl} alt="" className="wordmark-emblem" />
+      <span className="wordmark-text">
+        <span className="wordmark-main">NAVIYA</span>
+        <span className="wordmark-sub">TOPUP</span>
+      </span>
     </Link>
   );
 }

@@ -34,4 +34,4 @@ use the editor.
 - Free Fire lookups run only in `createServerFn` handlers in `src/lib/ff.functions.ts`; the Games Kinbo / Volsever keys come from server env and never reach the browser. Why: keys are paid/limited and must stay secret.
 - The Free Fire item picture list (`src/server/ff-items.json`) is imported lazily inside the server handler only. Why: it is ~1.3 MB and must not ship to the browser; `src/server/` cannot be imported by route files.
 - Store packages, prices and contact number live in `src/lib/site.ts`. Why: one place to edit shop data.
-- Brand marks come from the user's own logo artwork in `src/assets/` (header/footer wordmark, hero and page-hero mascot emblem) and `public/favicon.png` is derived from that emblem. Why: the site must show the user's real brand, not a generated text mark.
+- Brand marks come from the user's own logo artwork in `src/assets/` (mascot emblem for the header/footer, hero and page heroes; the header/footer brand name is typed text next to it) and `public/favicon.png` is derived from that emblem. Why: the site must show the user's real brand, not a generated text mark.

@@ -118,10 +118,31 @@
     box-shadow: 0 8px 20px color-mix(in oklab, var(--brand) 25%, transparent);
   }
 
-  /* Brand logo images */
-  .logo-img { height: 38px; width: auto; display: block; }
-  .logo-img-lg { height: 58px; width: auto; display: block; }
-  @media (min-width: 768px) { .logo-img { height: 46px; } }
+  /* Typed brand wordmark */
+  .wordmark { display: inline-flex; align-items: center; gap: 10px; line-height: 1; }
+  .wordmark-emblem {
+    width: 40px; height: 40px; border-radius: 50%; object-fit: cover;
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--brand-2) 55%, transparent), 0 6px 16px color-mix(in oklab, var(--brand) 30%, transparent);
+  }
+  .wordmark-text { display: flex; align-items: baseline; gap: 6px; font-weight: 900; letter-spacing: .5px; font-size: 21px; }
+  .wordmark-main {
+    background: linear-gradient(180deg, oklch(0.78 0.13 220), var(--brand) 55%, oklch(0.42 0.17 262));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    font-style: italic; letter-spacing: 1px;
+  }
+  .wordmark-sub { font-weight: 800; letter-spacing: 2px; font-size: .78em; }
+  .wordmark-light .wordmark-sub { color: var(--navy); }
+  .wordmark-dark .wordmark-sub { color: var(--on-dark-muted); }
+  .wordmark-dark .wordmark-main {
+    background: linear-gradient(180deg, oklch(0.92 0.08 215), var(--brand-2) 50%, var(--brand));
+    -webkit-background-clip: text; background-clip: text;
+  }
+  .wordmark-lg .wordmark-emblem { width: 52px; height: 52px; }
+  .wordmark-lg .wordmark-text { font-size: 27px; }
+  @media (min-width: 768px) {
+    .wordmark-md .wordmark-emblem { width: 44px; height: 44px; }
+    .wordmark-md .wordmark-text { font-size: 24px; }
+  }
 
   .hero-mark {
     position: absolute; right: -46px; top: 50%; translate: 0 -50%;
