@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SectionHead } from "@/components/site/PageHero";
 import { WHATSAPP_DISPLAY, whatsappLink } from "@/lib/site";
+import emblemUrl from "@/assets/naviya-emblem.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -55,7 +56,7 @@ function Home() {
               </div>
             </div>
             <div className="relative grid min-h-[260px] place-items-center md:min-h-[330px]">
-              <div className="orb">🎮</div>
+              <img src={emblemUrl} alt="NAVIYA TOPUP mascot" className="emblem" />
               <div className="glass absolute left-0 top-6 px-4 py-3 text-xs font-extrabold">
                 ⚡ Game top-ups<small className="mt-1 block font-medium text-on-dark-muted">Popular digital products</small>
               </div>

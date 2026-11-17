@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_DISPLAY, whatsappLink } from "@/lib/site";
+import logoUrl from "@/assets/naviya-logo-transparent.png";
 
 export function SiteFooter() {
   return (
@@ -9,11 +10,8 @@ export function SiteFooter() {
         <div className="wrap">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-[2fr_1fr_1fr_1fr]">
             <div className="col-span-2 md:col-span-1">
-              <Link to="/" className="flex items-center gap-3 font-black tracking-wide">
-                <span className="mark">N</span>
-                <span className="text-lg">
-                  NAVIYA <span className="text-brand">TOPUP</span>
-                </span>
+              <Link to="/" className="inline-flex" aria-label="NAVIYA TOPUP home">
+                <img src={logoUrl} alt="NAVIYA TOPUP STORE" className="logo-img-lg" />
               </Link>
               <p className="mt-4 max-w-[300px] text-sm leading-7 text-on-dark-muted">
                 Game top-ups and digital products, with friendly customer support.

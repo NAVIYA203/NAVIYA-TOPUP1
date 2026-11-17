@@ -2,13 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
 
+import logoUrl from "@/assets/naviya-logo-transparent.png";
+
 export function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-3 font-black tracking-wide">
-      <span className="mark">N</span>
-      <span className="text-lg">
-        NAVIYA <span className="text-brand">TOPUP</span>
-      </span>
+    <Link to="/" className="flex items-center" aria-label="NAVIYA TOPUP home">
+      <img src={logoUrl} alt="NAVIYA TOPUP STORE" className="logo-img" />
     </Link>
   );
 }
